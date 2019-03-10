@@ -6,15 +6,27 @@ public class User {
     String pwd;
     static String company = "KFC";
 
+    static {
+        System.out.println("执行类的初始化工作");
+        company = "小留同学";
+        printCompany();
+    }
+
     public User(int id, String name) {
         this.id = id;
         this.name = name;
 
     }
 
-    public void login() {
-        System.out.println("登录:" + name);
-    }
+//    public User(int id, String name, String company) {
+//        this.id = id;
+//        this.name = name;
+//        this.company = company;
+//    }
+
+//    public void login() {
+//        System.out.println("登录:" + name);
+//    }
 
     public static void printCompany() {
         System.out.println(company);
